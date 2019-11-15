@@ -1,0 +1,11 @@
+//
+// Created by Adam on 2019-11-15.
+//
+
+#ifndef GENETICALGORITHM_MAIN_HPP
+#define GENETICALGORITHM_MAIN_HPP
+
+
+
+
+#endif //GENETICALGORITHM_MAIN_HPP

@@ -80,7 +80,28 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/cygdrive/c/Users/Adam/CLionProjects/GeneticAlgorithm/City.cpp">
+			<Option target="GeneticAlgorithm"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Adam/CLionProjects/GeneticAlgorithm/City.hpp">
+			<Option target="GeneticAlgorithm"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Adam/CLionProjects/GeneticAlgorithm/Tour.cpp">
+			<Option target="GeneticAlgorithm"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Adam/CLionProjects/GeneticAlgorithm/Tour.hpp">
+			<Option target="GeneticAlgorithm"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Adam/CLionProjects/GeneticAlgorithm/cmake-build-debug/Population.cpp">
+			<Option target="GeneticAlgorithm"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Adam/CLionProjects/GeneticAlgorithm/cmake-build-debug/Population.hpp">
+			<Option target="GeneticAlgorithm"/>
+		</Unit>
 		<Unit filename="/cygdrive/c/Users/Adam/CLionProjects/GeneticAlgorithm/main.cpp">
+			<Option target="GeneticAlgorithm"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Adam/CLionProjects/GeneticAlgorithm/main.hpp">
 			<Option target="GeneticAlgorithm"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/Adam/CLionProjects/GeneticAlgorithm/CMakeLists.txt">
