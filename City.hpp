@@ -13,7 +13,7 @@ const int CITIES_IN_TOUR = 32;
 const int POPULATION_SIZE = 32;
 const int SHUFFLES = 64;
 const int ITERATIONS = 1000;
-const int MAP_BOUNDARY = 1000;
+const int MAP_BOUNDARY = 100;
 const int PARENT_POOL_SIZE = 5;
 const int MUTATION_RATE = 15;
 const int NUMBER_OF_PARENTS = 2;
@@ -33,6 +33,8 @@ private:
 public:
     City(){}
     City(int x, int y, string name): x{x}, y{y}, name{name} {};
+    int get_x(){return x;}
+    int get_y(){return y;}
     friend ostream& operator<<(ostream& os, const City& city);
 
 };

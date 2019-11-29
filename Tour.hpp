@@ -15,7 +15,10 @@ private:
 
 public:
     Tour(){}
-    Tour(vector<City> cities): cities{cities} {shuffleCities();determineFitness();}
+    Tour(vector<City> cities): cities{cities} {
+    }
+    double get_fitness(){return fitness;}
+    friend ostream& operator<<(ostream& os, const Tour& tour);
     void shuffleCities();
     void determineFitness();
 

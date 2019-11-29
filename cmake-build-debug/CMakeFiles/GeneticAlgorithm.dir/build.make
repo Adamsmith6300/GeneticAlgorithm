@@ -97,17 +97,17 @@ CMakeFiles/GeneticAlgorithm.dir/Tour.cpp.s: cmake_force
 	C:/cygwin64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/Adam/CLionProjects/GeneticAlgorithm/Tour.cpp -o CMakeFiles/GeneticAlgorithm.dir/Tour.cpp.s
 
 CMakeFiles/GeneticAlgorithm.dir/Population.cpp.o: CMakeFiles/GeneticAlgorithm.dir/flags.make
-CMakeFiles/GeneticAlgorithm.dir/Population.cpp.o: Population.cpp
+CMakeFiles/GeneticAlgorithm.dir/Population.cpp.o: ../Population.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Adam/CLionProjects/GeneticAlgorithm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/GeneticAlgorithm.dir/Population.cpp.o"
-	C:/cygwin64/bin/g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GeneticAlgorithm.dir/Population.cpp.o -c /cygdrive/c/Users/Adam/CLionProjects/GeneticAlgorithm/cmake-build-debug/Population.cpp
+	C:/cygwin64/bin/g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GeneticAlgorithm.dir/Population.cpp.o -c /cygdrive/c/Users/Adam/CLionProjects/GeneticAlgorithm/Population.cpp
 
 CMakeFiles/GeneticAlgorithm.dir/Population.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GeneticAlgorithm.dir/Population.cpp.i"
-	C:/cygwin64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/Adam/CLionProjects/GeneticAlgorithm/cmake-build-debug/Population.cpp > CMakeFiles/GeneticAlgorithm.dir/Population.cpp.i
+	C:/cygwin64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/Adam/CLionProjects/GeneticAlgorithm/Population.cpp > CMakeFiles/GeneticAlgorithm.dir/Population.cpp.i
 
 CMakeFiles/GeneticAlgorithm.dir/Population.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GeneticAlgorithm.dir/Population.cpp.s"
-	C:/cygwin64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/Adam/CLionProjects/GeneticAlgorithm/cmake-build-debug/Population.cpp -o CMakeFiles/GeneticAlgorithm.dir/Population.cpp.s
+	C:/cygwin64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/Adam/CLionProjects/GeneticAlgorithm/Population.cpp -o CMakeFiles/GeneticAlgorithm.dir/Population.cpp.s
 
 # Object files for target GeneticAlgorithm
 GeneticAlgorithm_OBJECTS = \
