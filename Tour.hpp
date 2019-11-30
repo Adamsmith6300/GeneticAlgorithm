@@ -10,17 +10,19 @@
 class Tour {
 
 private:
-    vector<City> cities;
+    vector<City*> cities;
     double fitness;
 
 public:
     Tour(){}
-    Tour(vector<City> cities): cities{cities} {
+    Tour(vector<City*> cities): cities{cities}, fitness{std::numeric_limits<float>::max()}{
     }
     double get_fitness(){return fitness;}
     friend ostream& operator<<(ostream& os, const Tour& tour);
     void shuffleCities();
     void determineFitness();
+    vector<City*> getCities(){return cities;}
+    void mutateTour();
 
 };
 

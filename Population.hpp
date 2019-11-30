@@ -6,6 +6,8 @@
 #define GENETICALGORITHM_POPULATION_HPP
 
 #include <vector>
+#include <random>
+#include <algorithm>
 #include "Tour.hpp"
 
 class Population {
@@ -16,7 +18,11 @@ private:
 public:
     Population(vector<Tour> tours): tours{tours}{}
     friend ostream& operator<<(ostream& os, const Population& pop);
-    vector<Tour> getParentSet();
+    Population getParentSet();
+    Tour moveBestTourToFront();
+    vector<Tour> getTours(){return tours;}
+    void setTours(vector<Tour> crosses){this->tours=crosses;}
+    double evaluateFitness();
 };
 
 

@@ -8,7 +8,7 @@
 
 ostream& operator<<(ostream& os, const Tour& tour){
     for(auto it = tour.cities.begin(); it != tour.cities.end(); ++it){
-        os << *it;
+        os << *(*it);
     }
     os << "Fitness: " << tour.fitness << endl;
     return os;
@@ -21,13 +21,26 @@ void Tour::shuffleCities(){
 }
 void Tour::determineFitness(){
     double totalDistance = 0.0;
-
     for(auto it = this->cities.begin(); it != this->cities.end() - 1; ++it){
-        double xDifference = abs(it->get_x() - (it + 1)->get_x());
-        double yDifference = abs(it->get_y() - (it + 1)->get_y());
+        double xDifference = abs((*it)->get_x() - (*(it+1))->get_x());
+        double yDifference = abs((*it)->get_y() - (*(it+1))->get_y());
         double distance = sqrt(pow(xDifference,2) + pow(yDifference,2));
         totalDistance += distance;
     }
     this->fitness = (1.0/totalDistance)*MAP_BOUNDARY;
-//    cout << this->fitness << endl;
+}
+
+void Tour::mutateTour(){
+//    cout << this->cities << endl;
+    for(int i = 0; i < this->cities.size(); ++i){
+        int mutationValue = rand() % 101;
+        if(mutationValue < MUTATION_RATE){
+            int randomOtherCity = rand() % this->cities.size();
+            City* temp = this->cities[i];
+            this->cities[i] = this->cities[randomOtherCity];
+            this->cities[randomOtherCity] = temp;
+        }
+    }
+//    cout << "AFTER: " << endl;
+//    cout << this->cities << endl;
 }
