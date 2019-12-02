@@ -31,16 +31,13 @@ void Tour::determineFitness(){
 }
 
 void Tour::mutateTour(){
-//    cout << this->cities << endl;
     for(int i = 0; i < this->cities.size(); ++i){
         int mutationValue = rand() % 101;
         if(mutationValue < MUTATION_RATE){
             int randomOtherCity = rand() % this->cities.size();
-            City* temp = this->cities[i];
-            this->cities[i] = this->cities[randomOtherCity];
+            City* temp = this->cities.at(i);
+            this->cities[i] = this->cities.at(randomOtherCity);
             this->cities[randomOtherCity] = temp;
         }
     }
-//    cout << "AFTER: " << endl;
-//    cout << this->cities << endl;
 }

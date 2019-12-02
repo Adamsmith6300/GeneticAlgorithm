@@ -21,7 +21,9 @@ public:
     Population getParentSet();
     Tour moveBestTourToFront();
     vector<Tour> getTours(){return tours;}
-    void setTours(vector<Tour> crosses){this->tours=crosses;}
+    void setTours(vector<Tour> crosses){
+        this->tours = crosses;
+    }
     double evaluateFitness();
 };
 

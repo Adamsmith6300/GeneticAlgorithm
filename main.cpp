@@ -12,7 +12,7 @@ using namespace std;
 
 vector<City*> make_citiesList();
 Tour crossTours(Tour p1, Tour p2);
-void mutateTours(vector<Tour> crosses);
+void mutateTours(vector<Tour>* crosses);
 
 int main() {
     vector<City*> citiesList = make_citiesList();
@@ -31,9 +31,8 @@ int main() {
     double bestDistance = baseDistance;
     srand (time(NULL));
     int count = 0;
-//    while (bestDistance/baseDistance > IMPROVEMENT_THRESHOLD && count < ITERATIONS){
-while(count < 10){
-    cout << count << endl;
+    while (bestDistance/baseDistance > IMPROVEMENT_THRESHOLD && count < ITERATIONS){
+
         Tour elite = pop.moveBestTourToFront();
         vector<Tour> crosses;
         crosses.push_back(elite);
@@ -45,19 +44,19 @@ while(count < 10){
             Tour mergedTour = crossTours(parentOne, parentTwo);
             crosses.push_back(mergedTour);
         }
-        mutateTours(crosses);
+        mutateTours(&crosses);
         pop.setTours(crosses);
         bestDistance = pop.evaluateFitness();
         ++count;
-//
-//        cout << "Iteration: " << count << endl;
-//        cout << "Distance/Fitness: " << bestDistance << endl;
-//        if(bestDistance < baseDistance){
-//            cout << "Improvement achieved" << endl;
-//        } else {
-//            cout << "Improvement not achieved" << endl;
-//        }
-//        cout << "Improved by: " << bestDistance/baseDistance << endl;
+
+        cout << "Iteration: " << count << endl;
+        cout << "Distance/Fitness: " << bestDistance << endl;
+        if(bestDistance < baseDistance){
+            cout << "Improvement achieved" << endl;
+        } else {
+            cout << "Improvement not achieved" << endl;
+        }
+        cout << "Improvement factor: " << bestDistance/baseDistance << endl;
     }
 
 
@@ -68,12 +67,12 @@ while(count < 10){
     cout << "Base Distance:" << baseDistance << endl;
     cout << "Best Distance:" << bestDistance << endl;
     if(bestDistance/baseDistance > IMPROVEMENT_THRESHOLD){
-        cout << "Improvement Factor Achieved!" << endl;
-    } else {
         cout << "Improvement Factor NOT Achieved!" << endl;
+    } else {
+        cout << "Improvement Factor Achieved!" << endl << endl;
     }
     cout << "Base Route: " << endl;
-    cout << baseElite << endl;
+    cout << baseElite << endl << endl;
     cout << "Best Route Taken: " << endl;
     cout << bestRoute << endl;
 
@@ -82,14 +81,14 @@ while(count < 10){
 }
 
 
-void mutateTours(vector<Tour> crosses){
+void mutateTours(vector<Tour>* crosses){
     int randAsInt = (rand() % 10) + 20;
     double randPercent = (double)randAsInt/100.00;
-    int mutationCount = randPercent * crosses.size();
+    int mutationCount = randPercent * crosses->size();
     int count = 0;
     while (count < mutationCount){
-        int randTourIndex = rand() % crosses.size() + 1;
-        crosses[randTourIndex].mutateTour();
+        int randTourIndex = rand() % crosses->size();
+        crosses->at(randTourIndex).mutateTour();
         ++count;
     }
 }

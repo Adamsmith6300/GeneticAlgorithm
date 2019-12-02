@@ -18,7 +18,7 @@ const int PARENT_POOL_SIZE = 5;
 const int MUTATION_RATE = 15;
 const int NUMBER_OF_PARENTS = 2;
 const int NUMBER_OF_ELITES = 1;
-const double IMPROVEMENT_THRESHOLD = 0.8;
+const double IMPROVEMENT_THRESHOLD = 0.85;
 
 
 using namespace std;
