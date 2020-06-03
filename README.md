@@ -1,3 +1,3 @@
 # GeneticAlgorithm
 
-Uses a genetic alogrithm to tackle the traveling salesman problem.
+Uses the genetic algorithm to tackle the traveling salesman problem.
